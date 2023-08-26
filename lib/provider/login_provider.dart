@@ -9,10 +9,10 @@ class LoginProvider extends ChangeNotifier {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
 
-  bool isLoading = false;
-
   UserModel? userModel;
   AuthService authService = AuthService();
+  
+  bool isLoading = false;
 
   loginAction({
     required GlobalKey<FormState> key,

@@ -92,7 +92,9 @@ class _LoginDemoState extends State<LoginDemo> {
                                   key: provider.formKey, context: context);
                             }
                           : null,
-                      child: provider.isLoading ? const CircularProgressIndicator() : const Text(
+                      child: provider.isLoading ? const SizedBox(
+                        child: CircularProgressIndicator(),
+                      ) : const Text(
                         'Login',
                         style: TextStyle(color: Colors.white, fontSize: 25),
                       ),
