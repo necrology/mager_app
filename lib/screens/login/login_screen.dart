@@ -17,6 +17,7 @@ class _LoginDemoState extends State<LoginDemo> {
   @override
   Widget build(BuildContext context) {
     return Consumer<LoginProvider>(builder: (context, provider, _) {
+      print('ISLOAD -> ${provider.isLoading}');
       return Scaffold(
         backgroundColor: Colors.white,
         body: Center(
@@ -91,7 +92,7 @@ class _LoginDemoState extends State<LoginDemo> {
                                   key: provider.formKey, context: context);
                             }
                           : null,
-                      child: const Text(
+                      child: provider.isLoading ? const CircularProgressIndicator() : const Text(
                         'Login',
                         style: TextStyle(color: Colors.white, fontSize: 25),
                       ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mager_app/provider/customer_provider.dart';
 import 'package:mager_app/provider/login_provider.dart';
 import 'package:mager_app/provider/register_provider.dart';
 import 'package:mager_app/provider/splash_provider.dart';
+import 'package:mager_app/screens/customer/customer_screen.dart';
 import 'package:mager_app/screens/login/login_screen.dart';
 import 'package:mager_app/screens/register/register_screen.dart';
 import 'package:mager_app/screens/splash/splash_screen.dart';
@@ -20,6 +22,10 @@ class Routes {
     RegisterScreen.route: (context) => ChangeNotifierProvider<RegisterProvider>(
           create: (context) => RegisterProvider(),
           child: const RegisterScreen(),
+        ),
+    CustomerScreen.route: (context) => ChangeNotifierProvider<CustomerProvider>(
+          create: (context) => CustomerProvider(),
+          child: const CustomerScreen(),
         ),
   };
 }

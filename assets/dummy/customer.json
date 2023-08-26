@@ -1,0 +1,10 @@
+{
+  "status": 200,
+  "message:": "Success login",
+  "data": {
+      "id": 1,
+      "nama": "Customer 1",
+      "email": "customer1@example.com",
+      "role": "customer"
+  }
+}
